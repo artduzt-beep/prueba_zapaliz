@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/intro.css">
 </head>
 <body>
 <div id="pre" aria-hidden="true"><b id="pn">0</b><i id="pb"></i></div>
@@ -31,6 +32,41 @@
 <a class="btn p wa" href="https://wa.me/520000000000" target="_blank" rel="noopener">WhatsApp</a>
 
 <main>
+<section id="intro" class="intro" aria-label="Bienvenida">
+  <div class="intro-in">
+    <h2 class="hola" aria-label="Hola"></h2>
+
+    <svg class="logo" viewBox="220 120 1740 490" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo ZAPALIZ">
+      <defs>
+        <polygon id="zl-z" points="772,270 923,270 923,298 828,416 923,416 923,453 772,453 772,424 867,302 772,302"/>
+        <path id="zl-a" fill-rule="evenodd" d="M1032,267 H1063 L1144,453 H1100 L1085,416 H1010 L995,453 H949 Z M1048,333 L1069,383 H1025 Z"/>
+      </defs>
+
+      <!-- Icono Z (se dibuja) -->
+      <path class="dr" pathLength="1" d="M343,175 H603 C640,175 665,195 660,235 C658,252 650,262 635,278 L510,412"/>
+      <path class="dr" pathLength="1" d="M450,315 L315,465 C290,490 290,548 350,548 H603"/>
+
+      <!-- Puntos verdes (entran con rebote) -->
+      <ellipse class="dot" cx="299" cy="286" rx="61" ry="56"/>
+      <ellipse class="dot" cx="649" cy="449" rx="61" ry="57"/>
+
+      <!-- Texto ZAPALIZ (letra por letra) -->
+      <g class="lt"><use href="#zl-z"/></g>
+      <g class="lt g"><use href="#zl-a"/></g>
+      <g class="lt"><path fill-rule="evenodd" d="M1174,267 H1255 C1308,267 1324,302 1324,330 C1324,360 1303,391 1255,391 H1211 V456 H1174 Z M1211,305 V353 H1250 C1272,353 1282,342 1282,329 C1282,316 1272,305 1250,305 Z"/></g>
+      <g class="lt"><use href="#zl-a" transform="translate(368 0)"/></g>
+      <g class="lt"><polygon points="1546,267 1583,267 1583,418 1674,418 1674,456 1546,456"/></g>
+      <g class="lt"><rect x="1707" y="267" width="37" height="189"/></g>
+      <g class="lt"><use href="#zl-z" transform="translate(1013 0)"/></g>
+    </svg>
+
+    <div class="scroll" aria-hidden="true">
+      <span>Desliza</span>
+      <i></i>
+    </div>
+  </div>
+</section>
+
 <header class="hero">
   <div class="hero-c">
     <p class="eyebrow">Diseño web · Branding · 3D</p>
@@ -160,6 +196,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!-- Propios: el orden importa -->
 <script src="js/core.js"></script>
+<script src="js/intro.js"></script>
 <script src="js/scenes.js"></script>
 <script src="js/home.js"></script>
 </body>
