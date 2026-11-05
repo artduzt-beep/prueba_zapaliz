@@ -1,4 +1,3 @@
-```javascript
 const A1 = new THREE.Color('#0088FF');
 const A2 = new THREE.Color('#00E5FF');
 
@@ -1883,4 +1882,3 @@ const TAU = 6.283;
     loop
   );
 })(0);
-```
