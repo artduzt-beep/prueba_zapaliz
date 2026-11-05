@@ -1,4 +1,3 @@
-```javascript
 gsap.registerPlugin(ScrollTrigger);
 
 const $ = id => document.getElementById(id);
@@ -328,4 +327,3 @@ if ($('f')) {
       'Gracias, abriremos tu correo para enviar el mensaje.';
   });
 }
-```
