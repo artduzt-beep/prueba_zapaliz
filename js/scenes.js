@@ -65,7 +65,6 @@ gx.fillStyle = gr;
 gx.fillRect(0, 0, 128, 128);
 
 const GT = new THREE.CanvasTexture(gc);
-const glows = [];
 
 const glow = (g, c, s, o) => {
   const sp = new THREE.Sprite(new THREE.SpriteMaterial({
@@ -79,7 +78,6 @@ const glow = (g, c, s, o) => {
 
   sp.scale.set(s, s, 1);
   g.add(sp);
-  glows.push(sp);
 };
 
 const seg = mob ? [160, 16] : [320, 30];
@@ -327,22 +325,6 @@ const fm = new THREE.ShaderMaterial({
 });
 
 scene.add(new THREE.Points(fg, fm));
-
-function applyTheme() {
-  const l = getComputedStyle(root).colorScheme.indexOf('light') > -1;
-
-  fm.blending = l ? THREE.NormalBlending : THREE.AdditiveBlending;
-  fm.needsUpdate = true;
-
-  glows.forEach(g => {
-    g.visible = !l;
-  });
-}
-
-applyTheme();
-
-matchMedia('(prefers-color-scheme: light)')
-  .addEventListener('change', applyTheme);
 
 const BR = [
   { bg: '#0B1F34', fg: '#ffffff', ac: '#00E5FF' },
@@ -643,7 +625,7 @@ $('wire').onclick = function() {
 
   allM.forEach(m => m.wireframe = isWire);
 
-  this.textContent = isWire ? 'Ver render' : 'Ver malla 3D';
+  this.textContent = isWire ? 'Ver render' : 'Ver estructura 3D';
 };
 
 const stageEl = $('stage');
