@@ -83,19 +83,6 @@ if ($('mani')) {
     .join(' ');
 }
 
-$('th').onclick = () => {
-  const l = getComputedStyle(root).colorScheme.indexOf('light') > -1;
-
-  root.setAttribute(
-    'data-theme',
-    l ? 'dark' : 'light'
-  );
-
-  if (typeof applyTheme === 'function') {
-    applyTheme();
-  }
-};
-
 const navEl = $('nav');
 const mb = $('mb');
 const prog = $('prog');
